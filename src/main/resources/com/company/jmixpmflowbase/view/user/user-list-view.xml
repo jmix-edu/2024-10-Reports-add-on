@@ -41,6 +41,8 @@
                     <actionItem id="showUserSubstitutionsItem" ref="usersDataGrid.showUserSubstitutions"/>
                 </items>
             </dropdownButton>
+            <button id="printSingleUserActionBtn" action="usersDataGrid.printSingleUserAction"/>
+            <button id="createUserDocumentBtn" action="usersDataGrid.createUserDocument"/>
             <simplePagination id="pagination" dataLoader="usersDl"/>
         </hbox>
         <dataGrid id="usersDataGrid"
@@ -56,6 +58,9 @@
                 <action id="changePassword" type="sec_changePassword"/>
                 <action id="resetPassword" type="sec_resetPassword"/>
                 <action id="showUserSubstitutions" type="sec_showUserSubstitutions"/>
+                <action id="printSingleUserAction" text="msg://printSingleUserAction.text" icon="vaadin:print"
+                        type="list_itemTracking"/>
+                <action id="createUserDocument" text="msg://createUserDocument.text" icon="vaadin:file-add" type="list_itemTracking"/>
             </actions>
             <columns resizable="true">
                 <column property="username"/>
@@ -64,6 +69,8 @@
                 <column property="email"/>
                 <column property="timeZoneId"/>
                 <column property="active"/>
+                <column property="photo"/>
+                <column property="document"/>
             </columns>
         </dataGrid>
         <hbox id="lookupActions" visible="false">

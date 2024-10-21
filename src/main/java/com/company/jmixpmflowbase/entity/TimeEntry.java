@@ -42,6 +42,18 @@ public class TimeEntry {
     @Lob
     private String description;
 
+    @Column(name = "APPROVED", nullable = false)
+    @NotNull
+    private Boolean approved = false;
+
+    public Boolean getApproved() {
+        return approved;
+    }
+
+    public void setApproved(Boolean approved) {
+        this.approved = approved;
+    }
+
     public String getDescription() {
         return description;
     }

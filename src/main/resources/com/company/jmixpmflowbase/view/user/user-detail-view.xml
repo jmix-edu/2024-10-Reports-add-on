@@ -32,6 +32,8 @@
             <textField id="emailField" property="email"/>
             <comboBox id="timeZoneField" property="timeZoneId"/>
             <checkbox id="activeField" property="active"/>
+            <fileStorageUploadField id="photoField" property="photo"/>
+            <fileStorageUploadField id="documentField" property="document"/>
         </formLayout>
         <hbox id="detailActions">
             <button id="saveAndCloseBtn" action="saveAction"/>
